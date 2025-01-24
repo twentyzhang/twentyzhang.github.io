@@ -4,17 +4,17 @@
   <meta charset="utf-8">
   
   
-  <title>Hexo</title>
+  <title>test | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="模版泛型在 C++ 中，模板（template）允许你编写通用的代码，使得代码可以接受不同的数据类型。模板可以应用于类（类模板）或函数（函数模板）。 1template &lt;typename T&gt;  &#x2F;&#x2F;注意，只影响紧跟在它后面的一个类或函数，换言之使用泛型时需要在前面做这样一个声明  1. 类模板类模板是允许我们定义一个通用的类，在实例化时可以指定类型参数。你可以在类定义时使用模板语法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="test">
 <meta property="og:url" content="http://example.com/2025/01/24/%E6%A8%A1%E7%89%88%E6%B3%9B%E5%9E%8B/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="模版泛型在 C++ 中，模板（template）允许你编写通用的代码，使得代码可以接受不同的数据类型。模板可以应用于类（类模板）或函数（函数模板）。 1template &lt;typename T&gt;  &#x2F;&#x2F;注意，只影响紧跟在它后面的一个类或函数，换言之使用泛型时需要在前面做这样一个声明  1. 类模板类模板是允许我们定义一个通用的类，在实例化时可以指定类型参数。你可以在类定义时使用模板语法">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2025-01-24T14:10:05.726Z">
-<meta property="article:modified_time" content="2025-01-24T14:09:40.000Z">
+<meta property="article:modified_time" content="2025-01-24T14:23:14.925Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -81,6 +81,16 @@
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      test
+    </h1>
+  
+
+      </header>
+    
     <div class="e-content article-entry" itemprop="articleBody">
       
         <h1 id="模版泛型"><a href="#模版泛型" class="headerlink" title="模版泛型"></a>模版泛型</h1><p>在 C++ 中，模板（template）允许你编写通用的代码，使得代码可以接受不同的数据类型。模板可以应用于类（类模板）或函数（函数模板）。</p>
@@ -90,16 +100,16 @@
 <h4 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义一个类模板</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyClass</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    T attribute;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">MyClass</span>(T val) : <span class="built_in">attribute</span>(val) &#123;&#125;  <span class="comment">// 构造函数</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">print</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;Value: &quot;</span> &lt;&lt; attribute &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="function">MyClass&lt;<span class="type">int</span>&gt; <span class="title">obj1</span><span class="params">(<span class="number">10</span>)</span></span>;  <span class="comment">// 用 int 类型实例化 MyClass</span></span><br><span class="line">    obj<span class="number">1.</span><span class="built_in">print</span>();</span><br><span class="line"></span><br><span class="line">    <span class="function">MyClass&lt;string&gt; <span class="title">obj2</span><span class="params">(<span class="string">&quot;Hello Template&quot;</span>)</span></span>;  <span class="comment">// 用 string 类型实例化 MyClass</span></span><br><span class="line">    obj<span class="number">2.</span><span class="built_in">print</span>();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="解释："><a href="#解释：" class="headerlink" title="解释："></a>解释：</h3><ol>
-<li>​<code>template &lt;typename T&gt;</code>​：这里 <code>T</code>​ 是一个模板参数，表示你在实例化时会指定的类型。</li>
-<li>​<code>MyClass&lt;int&gt;</code>​ 和 <code>MyClass&lt;string&gt;</code>​：分别实例化了 <code>MyClass</code>​ 类模板，分别使用 <code>int</code>​ 和 <code>string</code>​ 类型作为模板参数。</li>
+<li><code>template &lt;typename T&gt;</code>：这里 <code>T</code> 是一个模板参数，表示你在实例化时会指定的类型。</li>
+<li><code>MyClass&lt;int&gt;</code> 和 <code>MyClass&lt;string&gt;</code>：分别实例化了 <code>MyClass</code> 类模板，分别使用 <code>int</code> 和 <code>string</code> 类型作为模板参数。</li>
 </ol>
 <h3 id="2-函数模板"><a href="#2-函数模板" class="headerlink" title="2. 函数模板"></a>2. <strong>函数模板</strong></h3><p>函数模板用于定义一个通用的函数，它的行为可以适应不同的参数类型。在调用时，编译器会根据传递给函数的实际类型来自动推导模板类型。</p>
 <h4 id="示例：-1"><a href="#示例：-1" class="headerlink" title="示例："></a>示例：</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义一个函数模板</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="function">T <span class="title">add</span><span class="params">(T a, T b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Sum of 5 and 3: &quot;</span> &lt;&lt; <span class="built_in">add</span>(<span class="number">5</span>, <span class="number">3</span>) &lt;&lt; endl;  <span class="comment">// 自动推导 T 为 int</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Sum of 2.5 and 3.7: &quot;</span> &lt;&lt; <span class="built_in">add</span>(<span class="number">2.5</span>, <span class="number">3.7</span>) &lt;&lt; endl;  <span class="comment">// 自动推导 T 为 double</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="解释：-1"><a href="#解释：-1" class="headerlink" title="解释："></a>解释：</h3><ol>
-<li>​<code>template &lt;typename T&gt;</code>​：定义了一个类型模板参数 <code>T</code>​。</li>
-<li>​<code>add(5, 3)</code>​：编译器会自动推导出 <code>T</code>​ 为 <code>int</code>​ 类型。</li>
-<li>​<code>add(2.5, 3.7)</code>​：编译器会推导出 <code>T</code>​ 为 <code>double</code>​ 类型。</li>
+<li><code>template &lt;typename T&gt;</code>：定义了一个类型模板参数 <code>T</code>。</li>
+<li><code>add(5, 3)</code>：编译器会自动推导出 <code>T</code> 为 <code>int</code> 类型。</li>
+<li><code>add(2.5, 3.7)</code>：编译器会推导出 <code>T</code> 为 <code>double</code> 类型。</li>
 </ol>
 <h3 id="3-模板特化（Template-Specialization）"><a href="#3-模板特化（Template-Specialization）" class="headerlink" title="3. 模板特化（Template Specialization）"></a>3. <strong>模板特化（Template Specialization）</strong></h3><p>模板特化允许你为特定类型提供定制的实现。可以根据类型对模板进行特殊化，以便为某些类型提供不同的行为。</p>
 <h4 id="示例：-2"><a href="#示例：-2" class="headerlink" title="示例："></a>示例：</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 通用模板</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">print</span><span class="params">(T t)</span> </span>&#123;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Generic template: &quot;</span> &lt;&lt; t &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 针对 int 类型的模板特化</span></span><br><span class="line"><span class="keyword">template</span> &lt;&gt;</span><br><span class="line"><span class="type">void</span> <span class="built_in">print</span>&lt;<span class="type">int</span>&gt;(<span class="type">int</span> t) &#123;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Specialized template for int: &quot;</span> &lt;&lt; t &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">print</span>(<span class="number">3.14</span>);  <span class="comment">// 调用通用模板</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="number">10</span>);    <span class="comment">// 调用 int 类型特化的模板</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -121,7 +131,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/01/24/%E6%A8%A1%E7%89%88%E6%B3%9B%E5%9E%8B/" data-id="cm6aueyci00002kcyg4vdb3o4" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/01/24/%E6%A8%A1%E7%89%88%E6%B3%9B%E5%9E%8B/" data-id="cm6aueyci00002kcyg4vdb3o4" data-title="test" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -172,7 +182,7 @@
       <ul>
         
           <li>
-            <a href="/2025/01/24/%E6%A8%A1%E7%89%88%E6%B3%9B%E5%9E%8B/">(no title)</a>
+            <a href="/2025/01/24/%E6%A8%A1%E7%89%88%E6%B3%9B%E5%9E%8B/">test</a>
           </li>
         
           <li>
